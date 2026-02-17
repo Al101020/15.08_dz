@@ -1,4 +1,5 @@
-# Hooks & Context API
+# Hooks & Context API 
+(https://github.com/netology-code/ra16-homeworks/tree/master/hooks-context)
 ===
 
 Необходимо выполнить и предоставить на проверку следующие задачи:
@@ -29,11 +30,11 @@
 
 Вы решили потренироваться в использовании хука `useEffect` и реализовать следующее приложение — список с пользователями, в котором при клике на пользователя рядом появляется окно, отображающее детальную информацию о нём:
 
-![useEffect](./assets/use-effect.png)
+![useEffect](./src/assets/use-effect.png)
 
 При первой загрузке ни один из элементов не выбран, поэтому отображается только список:
 
-![First load](./assets/first-load.png)
+![First load](./src/assets/first-load.png)
 
 ## Механика
 
