@@ -1,0 +1,20 @@
+.users-list {
+  border: solid 1px black;
+  width: 40%;
+  min-width: 100px;
+  margin-right: 5px;
+  height: 100px;
+}
+
+.users-details {
+  border: solid 1px black;
+  flex: 1;
+  /* width: 60%;
+  min-width: 150px; */
+  width: 100px;
+  height: 100px;
+}
+
+.users {
+  display: flex;
+}
