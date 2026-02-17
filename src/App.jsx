@@ -1,15 +1,15 @@
 import './App.css';
 
-// import WorldClock from './components/task1/WorldClock.jsx';
-// import Crud from './components/task2/Crud.jsx';
+import ListAndDetails from './components/task1/ListAndDetails';
+import CustomHook from './components/task2/CustomHook';
 
 function App() {
   return (
     <>
       <h3>Задача №1 - Список и детали</h3>
-      {/* <WorldClock /> */}
+      <ListAndDetails />
       <h3>Задача №2 - useJsonFetch</h3>
-      {/* <Crud /> */}
+      <CustomHook />
     </>
   )
 };
