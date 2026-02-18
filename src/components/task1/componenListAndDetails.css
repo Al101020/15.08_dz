@@ -2,19 +2,37 @@
   border: solid 1px black;
   width: 40%;
   min-width: 100px;
-  margin-right: 5px;
-  height: 100px;
+  margin: 0 5px 0 0;
+  padding: 5px;
 }
 
 .users-details {
   border: solid 1px black;
   flex: 1;
-  /* width: 60%;
-  min-width: 150px; */
   width: 100px;
   height: 100px;
 }
 
 .users {
   display: flex;
+}
+
+.user:hover {
+  cursor: pointer;
+}
+
+.displayNone {
+  display: none;
+}
+
+.user-name {
+  margin: 1px;
+  padding: 3px;
+  border: solid 1px black;
+}
+
+.download {
+  text-align: center;
+  color: red;
+  /* color: white; */
 }

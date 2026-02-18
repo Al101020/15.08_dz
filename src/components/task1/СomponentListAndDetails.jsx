@@ -2,9 +2,11 @@ import './componenlistAndDetails.css';
 import { useEffect, useState } from 'react';
 
 import UsersList from './UsersList';
+import UserDetails from './UserDetails';
 
 function СomponentListAndDetails() {
   const [list, setList] = useState([]);
+  const [idDetails, setIdDetails] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -18,11 +20,16 @@ function СomponentListAndDetails() {
     fetchData();
   }, []);
 
+
+  // useEffect((e) => {
+  //     console.log(e.target);
+  // }, [idDetails]);
+
   return (
     <>
       <div className='users'>
-        <UsersList users={list} />
-        <div className='users-details'></div>
+        <UsersList users={list} setIdDetails={setIdDetails} />
+        <UserDetails idDetails={idDetails} />
       </div>
     </>
   )

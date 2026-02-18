@@ -1,18 +1,16 @@
-import { v4 as uuidv4 } from 'uuid';
+import ShowUsers from './ShowUsers';
 
 function UsersList(props) {
-  const users = props.users;
-  console.log(users);
+  console.log(props);
+  // const users = props.users;
+  // const setIdDetails = props.setIdDetails;
+  // console.log(setIdDetails);
+
   return (
-    
     <div className='users-list'>
-      {users.map((user) => {
-        <div className='user'>
-          <div className='user-id'>{user.id}</div>
-          <div className='user-name'>{user.name}</div>
-        </div>
-      })}
+      <ShowUsers users={props.users} setIdDetails={props.setIdDetails} />
     </div>
   );
 };
+
 export default UsersList;
