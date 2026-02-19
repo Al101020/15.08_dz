@@ -1,9 +1,6 @@
 function UserDetails(props) {
-  const users = props.users;
-//   console.log('UserDetails');
-  console.log(props);
-
-  // console.log(props.idDetails);
+  const users = props.users;  //   console.log('UserDetails');
+  console.log(props);  // console.log(props.idDetails);
 
   return (
     <div className='users-details'></div>

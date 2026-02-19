@@ -1,32 +1,14 @@
 import './componenlistAndDetails.css';
 import { useEffect, useState } from 'react';
 
-import UsersList from './UsersList';
+import ShowUsers from './ShowUsers';
 import UserDetails from './UserDetails';
 
 function СomponentListAndDetails() {
   
   const [list, setList] = useState([]);
   const [idDetails, setIdDetails] = useState(0);
-  
-  const [divUser, setDivUser] = useState('');
-  
-  // const white = 'ffffff';
-  // const [colorDivUser, setColorDivUser] = useState(white);
-
-  const [divDetails, setDivDetails] = useState('');
-
-  // const effect = () => {
-  //   console.log('--- состояние idDetails ИЗМЕНИЛОСЬ - ' + idDetails);
-
-  //   console.log(divUser);
-  //   if (divUser === '') {
-  //     return;
-  //   }
-  //   divUser.style.backgroundColor = 'blue';
-  //   divUser.style.color = 'white';
-  // };
-
+  // const [divDetails, setDivDetails] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -40,53 +22,20 @@ function СomponentListAndDetails() {
     fetchData();
   }, []);
 
-  //   console.log('--- состояние idDetails ИЗМЕНИЛОСЬ - ' + idDetails);
-      
-  
-
-
-
-    
-  // const users = Array.from(e.target.parentElement.parentElement.children);
-  //   // console.log(users);
-
-  //   users.forEach((el) => {    // console.log(el);
-  //     el.style.backgroundColor = 'white';
-  //     el.style.color = 'black';
-  //   });//console.log(e.target.parentElement.children[1].textContent);// 1-получаем имя
-
-  //   const target = e.target;
-  //   console.log(target.parentElement.parentElement.parentElement.children[1]);
-
-  //   target.parentElement.style.backgroundColor = 'blue';
-  //   target.parentElement.style.color = 'white';    // console.log(e.target.parentElement.children[0].textContent);// 1-получаем имя, 0-получаем id
-
-  useEffect(() => {
-    // console.log('--- состояние idDetails ИЗМЕНИЛОСЬ - ' + idDetails);
-
-    console.log(divUser);
-    if (divUser === '') {
-      return;
-    }
-    // divUser.style.backgroundColor = 'blue';
-    // divUser.style.color = 'white';
-  }, [idDetails]);
-
   return (
-    <>
+    <div className='task1'>
+      <h1 className='titleTask'>Список с пользователей</h1>
       <div className='users'>
-        <UsersList 
+        <ShowUsers 
           users={list}
           idDetails={idDetails}
           setIdDetails={setIdDetails}
-          setDivDetails={setDivDetails}
-          setDivUser={setDivUser}
         />
         <UserDetails
           users={list}
           idDetails={idDetails} />
       </div>
-    </>
+    </div>
   )
 }
 
