@@ -1,14 +1,18 @@
 import ShowUsers from './ShowUsers';
+import { v4 as uuidv4 } from 'uuid';
 
 function UsersList(props) {
-  console.log(props);
-  // const users = props.users;
-  // const setIdDetails = props.setIdDetails;
-  // console.log(setIdDetails);
+    // console.log(props);
 
   return (
     <div className='users-list'>
-      <ShowUsers users={props.users} setIdDetails={props.setIdDetails} />
+      <ShowUsers key={uuidv4()}
+        users={props.users}
+        idDetails={props.idDetails}
+        setIdDetails={props.setIdDetails}
+        setDivUser={props.setDivUser}
+        setDivDetails={props.setDivDetails}
+      />
     </div>
   );
 };
