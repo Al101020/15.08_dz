@@ -4,9 +4,11 @@ function User(props) {    //   console.log(props);
   const item = props.item;
   const idDetails = Number(props.idDetails);
   const setIdDetails = props.setIdDetails;
+  const setDivDetails = props.setDivDetails;
 
   const changeColor = (e) => {
     setIdDetails(e.target.parentElement.children[0].textContent);
+    setDivDetails(e.target.parentElement.parentElement.parentElement.children[1]);
   };
   return (
     <>

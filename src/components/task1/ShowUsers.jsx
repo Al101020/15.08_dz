@@ -4,14 +4,18 @@ import User from './User';
 function showUsers(props) {
   const idDetails = props.idDetails
   const setIdDetails = props.setIdDetails;
+  const setDivDetails = props.setDivDetails;
 
-  const funcUserDetails = (e) => {
-    const target = e.target;
-    const id = target.parentElement.children[0].textContent;
-    if (id !== idDetails) {
-      setIdDetails(id);
-    } 
-  };
+  // const funcUserDetails = (e) => {
+  //   const target = e.target;
+
+  //   console.log(target);
+
+  //   const id = target.parentElement.children[0].textContent;
+  //   if (id !== idDetails) {
+  //     setIdDetails(id);
+  //   } 
+  // };// funcUserDetails={funcUserDetails}
   
   const users = props.users;
 
@@ -22,12 +26,16 @@ function showUsers(props) {
       </>
     )
   }
-  
+
   return (
     <div className='users-list'>
       {users.map(item =>
-        <User key={uuidv4()} item={item} funcUserDetails={funcUserDetails} idDetails={idDetails}
-          setIdDetails={setIdDetails} />
+        <User key={uuidv4()} 
+          item={item} 
+          idDetails={idDetails} 
+          setIdDetails={setIdDetails}
+          setDivDetails={setDivDetails}
+        />
       )}
     </div>
   );
