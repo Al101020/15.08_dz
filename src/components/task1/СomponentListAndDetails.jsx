@@ -31,13 +31,7 @@ function СomponentListAndDetails() {
     if (divDetails === '') {
       return
     }
-    // console.log(idDetails);
-    // console.log(list);
-    // const objUser = list.find(obj => obj.id === Number(idDetails));
-    // console.log(objUser);
-    // ---
 
-    // fetch('https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/{id}.json', {
     async function fetchData() {
       fetch(`https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${idDetails}.json`)
       .then(response => response.json())
@@ -48,14 +42,7 @@ function СomponentListAndDetails() {
       .catch(error => console.error('Fetch error:', error));
     };
     fetchData();
-
-    // ---
   }, [idDetails]);
-
-  // useEffect(() => {
-  //   // if (Details === {}) {}
-     
-  // }, [Details]);
 
   return (
     <div className='task1'>
@@ -69,6 +56,7 @@ function СomponentListAndDetails() {
         />
         <UserDetails
           info={Details}
+          divDetails={divDetails}
         />
       </div>
     </div>

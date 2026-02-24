@@ -22,7 +22,7 @@ function showUsers(props) {
   if (users.length === 0) {
     return (
       <>
-        <div className='download'>Загрузка...</div>
+        <div className='users-list download'>Загрузка...</div>
       </>
     )
   }

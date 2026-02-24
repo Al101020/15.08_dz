@@ -7,10 +7,11 @@ function User(props) {    //   console.log(props);
   const setDivDetails = props.setDivDetails;
 
   const changeColor = (e) => {
-    const divDetalist = e.target.parentElement.parentElement.parentElement.children[1];
+    const divDetails = e.target.parentElement.parentElement.parentElement.children[1];
+    divDetails.innerHTML = `<p class='download'>Загрузка...</p>`;
+
     setIdDetails(e.target.parentElement.children[0].textContent);
-    setDivDetails(divDetalist);
-    divDetalist.innerHTML = 'Загрузка...';
+    setDivDetails(divDetails);
   };
   return (
     <>
