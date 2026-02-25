@@ -1,12 +1,15 @@
 import { v4 as uuidv4 } from 'uuid';
 
-function User(props) {    //   console.log(props);
+function User(props) {
   const item = props.item;
   const idDetails = Number(props.idDetails);
   const setIdDetails = props.setIdDetails;
   const setDivDetails = props.setDivDetails;
 
   const changeColor = (e) => {
+    if (item.id === idDetails) {
+      return;
+    }
     const divDetails = e.target.parentElement.parentElement.parentElement.children[1];
     divDetails.innerHTML = `<p class='download'>Загрузка...</p>`;
 

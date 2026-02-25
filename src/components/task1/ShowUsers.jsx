@@ -6,17 +6,6 @@ function showUsers(props) {
   const setIdDetails = props.setIdDetails;
   const setDivDetails = props.setDivDetails;
 
-  // const funcUserDetails = (e) => {
-  //   const target = e.target;
-
-  //   console.log(target);
-
-  //   const id = target.parentElement.children[0].textContent;
-  //   if (id !== idDetails) {
-  //     setIdDetails(id);
-  //   } 
-  // };// funcUserDetails={funcUserDetails}
-  
   const users = props.users;
 
   if (users.length === 0) {
