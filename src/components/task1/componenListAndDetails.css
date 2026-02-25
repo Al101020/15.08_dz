@@ -63,3 +63,8 @@
 
 
 /* font-size: 180%; */
+
+.img-avatar {
+  max-width: 100%;
+  /* object-fit: cover; */
+}

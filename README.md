@@ -72,3 +72,9 @@ const [data, loading, error] = useJsonFetch(url, opts);
 * GET http://localhost:7070/loading — индикатор загрузки.
 
 Backend возьмите из каталога `backend`.
+
++ + + + + + + +
+===============
+
+Похожий пример:
+https://github.com/NMYurchenko-max/nmy-ra-use-json-fetch/tree/master

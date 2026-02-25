@@ -24,6 +24,7 @@ function UserDetails(props) {
     const position = info.details.position;
     // divDetails.textContent = city;
     divDetails.innerHTML = `
+      <img src=${info.avatar}  class='img-avatar' alt="Аватар">
       <h4 class='infoName'>${name}</h4>
       <div class='infoCity'>City: ${city}</div>
       <div class='infoCompany'>${company}</div>
